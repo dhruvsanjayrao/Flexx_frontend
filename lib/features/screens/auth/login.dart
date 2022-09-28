@@ -42,17 +42,31 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(children: [
-              const Center(
-                child: Padding(
-                  padding: EdgeInsets.only(top: 20, left: 40, right: 40),
-                  child: Text(
-                    'App',
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+              Row(
+                children: [
+                  const SizedBox(width: 10),
+                  IconButton(
+                    onPressed: () =>
+                        Navigator.pop(context, const LoginScreen()),
+                    icon: const Icon(
+                      Icons.arrow_back_ios_rounded,
+                      color: Colors.white,
+                      size: 30,
+                    ),
                   ),
-                ),
+                  const Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 20, left: 40, right: 40),
+                      child: Text(
+                        'App',
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const Align(
                 alignment: Alignment.center,
