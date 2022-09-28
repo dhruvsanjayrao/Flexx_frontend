@@ -18,14 +18,16 @@ class _AuthScreenState extends State<AuthScreen> {
   final AuthService authService = AuthService();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _firstnameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
 
   void createAccountUser() {
     authService.createAccountUser(
       context: context,
       email: _emailController.text,
       password: _passwordController.text,
-      name: _nameController.text,
+      firstname: _firstnameController.text,
+      lastname: _lastnameController.text,
     );
   }
 
@@ -34,7 +36,8 @@ class _AuthScreenState extends State<AuthScreen> {
     super.dispose();
     _emailController.dispose();
     _passwordController.dispose();
-    _nameController.dispose();
+    _firstnameController.dispose();
+    _lastnameController.dispose();
   }
 
   @override
@@ -78,7 +81,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   child: Column(
                     children: [
                       CustomTextField(
-                        controller: _nameController,
+                        controller: _firstnameController,
                         hintText: 'Name',
                       ),
                       const SizedBox(height: 20),

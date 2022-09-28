@@ -16,12 +16,14 @@ class AuthService {
     required BuildContext context,
     required String email,
     required String password,
-    required String name,
+    required String firstname,
+    required String lastname,
   }) async {
     try {
       User user = User(
         id: '',
-        name: name,
+        firstname: firstname,
+        lastname: lastname,
         password: password,
         email: email,
         address: '',
