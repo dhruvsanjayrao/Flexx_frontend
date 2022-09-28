@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Invest',
+      title: 'Flexx',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariabes.backgroundColor,
         primarySwatch: Colors.amber,
